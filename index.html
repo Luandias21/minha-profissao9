@@ -1,11 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atleta Profissional | Portfólio</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            color: #ffde59; /* Cor de destaque (Amarelo/Ouro) */
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            border-bottom: 2px solid #ffde59;
+            padding-bottom: 10px;
+        }
+
+        /* Seções */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ffde59;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        /* Cards de Conquistas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-left: 5px solid #ffde59;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        /* Contato */
+        .contact-box {
+            background: #ffde59;
+            color: #121212;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #121212;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <h1>SEU NOME AQUI</h1>
+        <p class="subtitle">Atleta de [Sua Modalidade]</p>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Escreva aqui sua trajetória. Conte como começou no esporte, quais são seus principais valores (disciplina, superação, resiliência) e quais são seus objetivos atuais para a temporada de 2026.</p>
+                <br>
+                <p>O esporte não é apenas o que eu faço, é quem eu sou. Cada treino é um degrau rumo ao topo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="conquistas">
+        <h2>Principais Conquistas</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>1º Lugar</h3>
+                <p>Campeonato Nacional 2024</p>
+            </div>
+            <div class="stat-card">
+                <h3>Top 5</h3>
+                <p>Ranking Mundial da Categoria</p>
+            </div>
+            <div class="stat-card">
+                <h3>12</h3>
+                <p>Medalhas de Ouro em 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <div class="contact-box">
+            <h2>Patrocínios e Parcerias</h2>
+            <p>Interessado em apoiar minha jornada ou realizar parcerias comerciais?</p>
+            <a href="mailto:seuemail@exemplo.com" class="btn">ENTRAR EM CONTATO</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Todos os direitos reservados. Design para Atletas.</p>
+    </footer>
+
 </body>
 </html>
