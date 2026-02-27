@@ -1,152 +1,36 @@
-/* style.css - Estilo Médico Profissional */
+/* Isso é o que dá a "cara" do site do Luan Dias */
 
 :root {
-    --azul-principal: #0056b3;
-    --azul-claro: #e6f0fa;
-    --texto-escuro: #333333;
-    --texto-claro: #ffffff;
-    --cinza-fundo: #f4f7f6;
-    --accent: #2a9d8f;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary: #ffde59; /* Cor Amarelo Ouro */
+    --bg-gradient: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
 }
 
 body {
-    background-color: var(--cinza-fundo);
-    color: var(--texto-escuro);
-    line-height: 1.6;
+    margin: 0;
+    background-image: var(--bg-gradient); /* Fundo com luz no centro */
+    color: white;
+    font-family: 'Impact', sans-serif; /* Fonte forte de atleta */
 }
 
-/* Cabeçalho */
+.nome-atleta {
+    font-size: 8rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-style: italic; /* Nome inclinado para dar ideia de velocidade */
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+
+/* Efeito para o nome aparecer deslizando */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
 header {
-    background-color: var(--texto-claro);
-    padding: 20px;
-    text-align: center;
-    border-bottom: 3px solid var(--azul-principal);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.nome-medico {
-    color: var(--azul-principal);
-    font-size: 2.2rem;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.especialidade {
-    font-weight: 300;
-    color: #555;
-    font-size: 1.1rem;
-}
-
-/* Hero Section */
-.hero {
-    background-color: var(--azul-claro);
-    padding: 80px 20px;
-    text-align: center;
-    border-bottom: 1px solid #d0e0f0;
-}
-
-.hero h1 {
-    color: var(--azul-principal);
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-size: 1.2rem;
-    color: #444;
-}
-
-/* Botão */
-.btn-agendar {
-    background-color: var(--accent);
-    color: var(--texto-claro);
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: background 0.3s, transform 0.2s;
-    display: inline-block;
-}
-
-.btn-agendar:hover {
-    background-color: #21867a;
-    transform: translateY(-2px);
-}
-
-/* Seções */
-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h2 {
-    color: var(--azul-principal);
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.bio-container {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-/* Grid de Serviços */
-.servicos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.servico-card {
-    background: var(--texto-claro);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    text-align: center;
-    border-bottom: 4px solid var(--azul-principal);
-    transition: 0.3s;
-}
-
-.servico-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
-
-.servico-card h3 {
-    color: var(--azul-principal);
-    margin-bottom: 15px;
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--texto-escuro);
-    color: var(--texto-claro);
-    text-align: center;
-    padding: 50px 20px;
-    margin-top: 40px;
-}
-
-footer p {
-    margin-bottom: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 1s ease-out;
 }
