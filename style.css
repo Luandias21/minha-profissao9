@@ -1,36 +1,46 @@
-/* Isso é o que dá a "cara" do site do Luan Dias */
-
-:root {
-    --primary: #ffde59; /* Cor Amarelo Ouro */
-    --bg-gradient: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
-}
+/* style.css - Simples e Direto */
 
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    background-image: var(--bg-gradient); /* Fundo com luz no centro */
-    color: white;
-    font-family: 'Impact', sans-serif; /* Fonte forte de atleta */
-}
-
-.nome-atleta {
-    font-size: 8rem;
-    color: var(--primary);
-    text-transform: uppercase;
-    font-style: italic; /* Nome inclinado para dar ideia de velocidade */
-    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
-}
-
-/* Efeito para o nome aparecer deslizando */
-@keyframes slideIn {
-    from { opacity: 0; transform: translateX(-100px); }
-    to { opacity: 1; transform: translateX(0); }
+    background: #111;
+    color: #fff;
+    text-align: center;
 }
 
 header {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: slideIn 1s ease-out;
+    padding: 50px 20px;
+    background: #000;
+}
+
+h1 {
+    color: #ffde59;
+    margin: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #222;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 4px solid #ffde59;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffde59;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
 }
