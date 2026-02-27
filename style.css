@@ -1,39 +1,96 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luan Dias | Atleta Profissional de Vôlei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    /* Imagem de fundo */
-    background-image: url('fundo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-}
+    <header>
+        <div class="logo">LUAN<span>DIAS</span></div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#carreira">Carreira</a></li>
+                <li><a href="#conquistas">Conquistas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.overlay {
-    /* Camada escura para dar contraste ao texto */
-    background-color: rgba(0, 0, 0, 0.7);
-    min-height: 100vh;
-    padding: 20px;
-}
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FORÇA E PRECISAO NA QUADRA</h1>
+            <p>Atleta Profissional de Vôlei | Posicao: Ponteiro</p>
+            <a href="#contato" class="btn-cta">Vamos conversar</a>
+        </div>
+    </section>
 
-header {
-    padding: 50px 20px;
-}
+    <section id="sobre" class="container">
+        <h2>Sobre Mim</h2>
+        <div class="sobre-content">
+            <p>Luan Dias é um atleta dedicado, com foco total na alta performance. Iniciou sua jornada nas categorias de base e hoje se destaca pela técnica apurada e liderança dentro de quadra. Movido por desafios, busca constantemente superar seus próprios limites.</p>
+        </div>
+    </section>
 
-h1 {
-    color: #ffde59; /* Cor Amarelo Ouro */
-    margin: 0;
-    font-size: 3rem;
-    text-transform: uppercase;
-}
+    <section id="carreira" class="carreira-section">
+        <div class="container">
+            <h2>Carreira e Estatísticas</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>700+</h3>
+                    <p>Pontos na temporada</p>
+                </div>
+                <div class="stat-card">
+                    <h3>55%</h3>
+                    <p>Aproveitamento de Ataque</p>
+                </div>
+                <div class="stat-card">
+                    <h3>80</h3>
+                    <p>Bloqueios eficientes</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5</h3>
+                    <p>Clubes na carreira</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
+    <section id="conquistas" class="container">
+        <h2>Principais Conquistas</h2>
+        <div class="conquistas-grid">
+            <div class="conquista-item">
+                <span class="ano">2025</span>
+                <h3>Campeão da Superliga B</h3>
+                <p>Time Principal</p>
+            </div>
+            <div class="conquista-item">
+                <span class="ano">2024</span>
+                <h3>Melhor Ponteiro</h3>
+                <p>Campeonato Estadual</p>
+            </div>
+            <div class="conquista-item">
+                <span class="ano">2023</span>
+                <h3>Medalha de Ouro</h3>
+                <p>Jogos Universitários</p>
+            </div>
+        </div>
+    </section>
 
-.card {
-    background: rgba(34, 34, 34, 0
+    <section id="contato" class="contato-section">
+        <div class="container">
+            <h2>Assessoria e Parcerias</h2>
+            <p>Interessado em patrocínio ou parcerias comerciais?</p>
+            <a href="mailto:contato@luandias.com" class="btn-email">Enviar Proposta</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luan Dias. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
