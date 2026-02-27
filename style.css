@@ -21,16 +21,17 @@ body {
     font-family: var(--fonte-corpo);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Imagem de fundo referenciada */
-    background-image: url('fundo.jpg');
+    /* Imagem de fundo atualizada com o link fornecido */
+    background-image: url('https://www.gazetadorn.com.br/uploads/images/2024/02/volei-natal-desportivo-entra-em-quadra-nesta-sexta-pela-superliga-b-feminina-0fcff.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .overlay {
     /* Camada escura para dar contraste ao texto */
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.7);
     min-height: 100vh;
 }
 
