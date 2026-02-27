@@ -1,17 +1,18 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. [Seu Nome] | Especialista em [Sua Especialidade]</title>
+    <title>Dr. Luan Dias | Especialista em Saúde</title>
     <style>
-        /* CSS Embutido - Estilo Médico */
+        /* CSS Embutido - Estilo Médico Profissional */
         :root {
-            --azul-principal: #0056b3;
+            --azul-principal: #0056b3; /* Azul Profissional */
             --azul-claro: #e6f0fa;
             --texto-escuro: #333333;
             --texto-claro: #ffffff;
             --cinza-fundo: #f4f7f6;
+            --accent: #2a9d8f; /* Cor de destaque para botões */
         }
 
         * {
@@ -36,51 +37,60 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .nome-medico {
             color: var(--azul-principal);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .especialidade {
             font-weight: 300;
-            color: #666;
+            color: #555;
+            font-size: 1.1rem;
         }
 
-        /* Hero Section */
+        /* Hero Section - Destaque */
         .hero {
             background-color: var(--azul-claro);
-            padding: 100px 20px;
+            padding: 80px 20px;
             text-align: center;
+            border-bottom: 1px solid #d0e0f0;
         }
 
         .hero h1 {
             color: var(--azul-principal);
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             margin-bottom: 20px;
         }
 
         .hero p {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 30px;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: #444;
         }
 
         /* Botão de Ação */
         .btn-agendar {
-            background-color: var(--azul-principal);
+            background-color: var(--accent);
             color: var(--texto-claro);
-            padding: 15px 30px;
+            padding: 15px 35px;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
-            transition: background 0.3s;
+            font-size: 1.1rem;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
         }
 
         .btn-agendar:hover {
-            background-color: #003d80;
+            background-color: #21867a;
+            transform: translateY(-2px);
         }
 
         /* Seções */
@@ -94,13 +104,15 @@
             color: var(--azul-principal);
             text-align: center;
             margin-bottom: 40px;
-            font-size: 2rem;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Cards de Serviços */
         .servicos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
         }
 
@@ -108,15 +120,20 @@
             background: var(--texto-claro);
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             text-align: center;
-            border-top: 4px solid transparent;
+            border-bottom: 4px solid var(--azul-principal);
             transition: 0.3s;
         }
 
         .servico-card:hover {
-            border-top: 4px solid var(--azul-principal);
             transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .servico-card h3 {
+            color: var(--azul-principal);
+            margin-bottom: 15px;
         }
 
         /* Rodapé */
@@ -124,56 +141,17 @@
             background-color: var(--texto-escuro);
             color: var(--texto-claro);
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             margin-top: 40px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 class="nome-medico">Dr. Nome Sobrenome</h1>
-        <p class="especialidade">Especialista em [Sua Especialidade]</p>
-    </header>
-
-    <section class="hero">
-        <h1>Cuidado Especializado e Humano</h1>
-        <p>Atendimento médico de excelência focado na sua saúde e qualidade de vida. Agende sua consulta online e tire suas dúvidas.</p>
-        <a href="#contato" class="btn-agendar">Agendar Consulta</a>
-    </section>
-
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-            Formado em Medicina pela [Universidade], com residência em [Especialidade] no [Hospital]. Dedico minha carreira a oferecer diagnósticos precisos e tratamentos personalizados, sempre com foco na ética e no bem-estar do paciente.
-        </p>
-    </section>
-
-    <section id="servicos">
-        <h2>Serviços</h2>
-        <div class="servicos-grid">
-            <div class="servico-card">
-                <h3>Consulta Especializada</h3>
-                <p>Avaliação detalhada e plano de tratamento personalizado.</p>
-            </div>
-            <div class="servico-card">
-                <h3>Exames de Rotina</h3>
-                <p>Solicitação e análise de exames para prevenção.</p>
-            </div>
-            <div class="servico-card">
-                <h3>Telemedicina</h3>
-                <p>Consultas online com a mesma qualidade e segurança.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contato">
-        <p><strong>Dr. Nome Sobrenome</strong></p>
-        <p>CRM: 000000 - UF</p>
-        <p>Endereço da Clínica, 123 - Bairro</p>
-        <p>Telefone: (00) 90000-0000</p>
-        <p>&copy; 2026 - Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
+        <h1 class="nome-medico">Dr. Luan Dias</h1>
+        <p class="especialidade">Cardiologia e Medicina Intern
