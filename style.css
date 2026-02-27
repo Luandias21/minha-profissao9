@@ -1,0 +1,36 @@
+/* Isso é o que dá a "cara" do site do Luan Dias */
+
+:root {
+    --primary: #ffde59; /* Cor Amarelo Ouro */
+    --bg-gradient: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
+}
+
+body {
+    margin: 0;
+    background-image: var(--bg-gradient); /* Fundo com luz no centro */
+    color: white;
+    font-family: 'Impact', sans-serif; /* Fonte forte de atleta */
+}
+
+.nome-atleta {
+    font-size: 8rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-style: italic; /* Nome inclinado para dar ideia de velocidade */
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+}
+
+/* Efeito para o nome aparecer deslizando */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 1s ease-out;
+}
