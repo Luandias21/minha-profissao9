@@ -1,184 +1,178 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luan Dias | Atleta Profissional</title>
+    <title>Dr. [Seu Nome] | Especialista em [Sua Especialidade]</title>
     <style>
-        /* Configurações de Atleta */
+        /* CSS Embutido - Estilo Médico */
         :root {
-            --cor-primaria: #ffde59; /* Amarelo Ouro */
-            --cor-fundo: #0a0a0a;
-            --cor-card: #161616;
-            --fonte-titulo: 'Impact', 'Arial Black', sans-serif;
+            --azul-principal: #0056b3;
+            --azul-claro: #e6f0fa;
+            --texto-escuro: #333333;
+            --texto-claro: #ffffff;
+            --cinza-fundo: #f4f7f6;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--cor-fundo);
-            color: #ffffff;
+            background-color: var(--cinza-fundo);
+            color: var(--texto-escuro);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* Header com Efeito Visual */
+        /* Cabeçalho */
         header {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), 
-                        url('https://images.unsplash.com/photo-1530549387631-fbb129c13d98?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-color: var(--texto-claro);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--azul-principal);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nome-medico {
+            color: var(--azul-principal);
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        .especialidade {
+            font-weight: 300;
+            color: #666;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--azul-claro);
+            padding: 100px 20px;
             text-align: center;
         }
 
-        .nome-atleta {
-            font-family: var(--fonte-titulo);
-            font-size: clamp(3rem, 10vw, 6rem);
-            color: var(--cor-primaria);
-            text-transform: uppercase;
-            letter-spacing: -2px;
-            line-height: 0.9;
-            margin-bottom: 10px;
-            font-style: italic;
-            text-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+        .hero h1 {
+            color: var(--azul-principal);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
-        .tagline {
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            color: #ccc;
-            border-top: 1px solid var(--cor-primaria);
-            padding-top: 10px;
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
         }
 
-        /* Seções de Conteúdo */
+        /* Botão de Ação */
+        .btn-agendar {
+            background-color: var(--azul-principal);
+            color: var(--texto-claro);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn-agendar:hover {
+            background-color: #003d80;
+        }
+
+        /* Seções */
         section {
-            padding: 80px 20px;
-            max-width: 1100px;
+            padding: 60px 20px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
         h2 {
-            font-family: var(--fonte-titulo);
-            font-size: 2.5rem;
-            text-transform: uppercase;
+            color: var(--azul-principal);
+            text-align: center;
             margin-bottom: 40px;
-            border-left: 8px solid var(--cor-primaria);
-            padding-left: 15px;
+            font-size: 2rem;
         }
 
-        .grid-conquistas {
+        /* Cards de Serviços */
+        .servicos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        .card {
-            background: var(--cor-card);
-            padding: 40px;
-            border-radius: 4px;
-            transition: 0.4s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            background: #222;
-            transform: scale(1.03);
-        }
-
-        .card h3 {
-            color: var(--cor-primaria);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        /* Botão de Contato Estilizado */
-        .contato-container {
+        .servico-card {
+            background: var(--texto-claro);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             text-align: center;
-            background: linear-gradient(45deg, #1a1a1a, #000);
-            padding: 60px;
-            border-radius: 20px;
-            border: 1px solid #333;
-        }
-
-        .btn-contato {
-            display: inline-block;
-            background: var(--cor-primaria);
-            color: #000;
-            padding: 18px 45px;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            border-radius: 50px;
+            border-top: 4px solid transparent;
             transition: 0.3s;
-            margin-top: 25px;
         }
 
-        .btn-contato:hover {
-            background: #fff;
-            box-shadow: 0 0 20px rgba(255, 222, 89, 0.4);
+        .servico-card:hover {
+            border-top: 4px solid var(--azul-principal);
+            transform: translateY(-5px);
         }
 
+        /* Rodapé */
         footer {
+            background-color: var(--texto-escuro);
+            color: var(--texto-claro);
             text-align: center;
-            padding: 40px;
-            opacity: 0.5;
-            font-size: 0.8rem;
+            padding: 40px 20px;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 class="nome-atleta">LUAN DIAS</h1>
-        <p class="tagline">Atleta Profissional</p>
+        <h1 class="nome-medico">Dr. Nome Sobrenome</h1>
+        <p class="especialidade">Especialista em [Sua Especialidade]</p>
     </header>
 
+    <section class="hero">
+        <h1>Cuidado Especializado e Humano</h1>
+        <p>Atendimento médico de excelência focado na sua saúde e qualidade de vida. Agende sua consulta online e tire suas dúvidas.</p>
+        <a href="#contato" class="btn-agendar">Agendar Consulta</a>
+    </section>
+
     <section id="sobre">
-        <h2>Trajetória</h2>
-        <p>Minha jornada é movida pela disciplina e pela busca incessante pela performance. Como Luan Dias, meu compromisso com o esporte vai além dos resultados; é sobre superar limites a cada novo desafio enfrentado na arena.</p>
+        <h2>Sobre Mim</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Formado em Medicina pela [Universidade], com residência em [Especialidade] no [Hospital]. Dedico minha carreira a oferecer diagnósticos precisos e tratamentos personalizados, sempre com foco na ética e no bem-estar do paciente.
+        </p>
     </section>
 
-    <section id="stats">
-        <h2>Histórico de Vitórias</h2>
-        <div class="grid-conquistas">
-            <div class="card">
-                <h3>Campeão Regional</h3>
-                <p>Temporada 2024 - Categoria Elite</p>
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <div class="servicos-grid">
+            <div class="servico-card">
+                <h3>Consulta Especializada</h3>
+                <p>Avaliação detalhada e plano de tratamento personalizado.</p>
             </div>
-            <div class="card">
-                <h3>Recorde Pessoal</h3>
-                <p>Superação de marca histórica em 2025</p>
+            <div class="servico-card">
+                <h3>Exames de Rotina</h3>
+                <p>Solicitação e análise de exames para prevenção.</p>
             </div>
-            <div class="card">
-                <h3>Destaque do Ano</h3>
-                <p>Prêmio de atleta revelação</p>
+            <div class="servico-card">
+                <h3>Telemedicina</h3>
+                <p>Consultas online com a mesma qualidade e segurança.</p>
             </div>
         </div>
     </section>
 
-    <section id="parcerias">
-        <div class="contato-container">
-            <h2>Vamos trabalhar juntos?</h2>
-            <p>Seja para patrocínios, palestras ou parcerias de marca.</p>
-            <a href="mailto:contato@luandias.com" class="btn-contato">Enviar Proposta</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Luan Dias. Todos os direitos reservados.</p>
+    <footer id="contato">
+        <p><strong>Dr. Nome Sobrenome</strong></p>
+        <p>CRM: 000000 - UF</p>
+        <p>Endereço da Clínica, 123 - Bairro</p>
+        <p>Telefone: (00) 90000-0000</p>
+        <p>&copy; 2026 - Todos os direitos reservados.</p>
     </footer>
 
 </body>
