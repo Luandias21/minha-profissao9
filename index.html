@@ -75,3 +75,111 @@
             text-transform: uppercase;
             margin-bottom: 40px;
             border-left: 8px solid var(--cor-primaria);
+            padding-left: 15px;
+        }
+
+        .grid-conquistas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--cor-card);
+            padding: 40px;
+            border-radius: 4px;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            background: #222;
+            transform: scale(1.03);
+        }
+
+        .card h3 {
+            color: var(--cor-primaria);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        /* Botão de Contato Estilizado */
+        .contato-container {
+            text-align: center;
+            background: linear-gradient(45deg, #1a1a1a, #000);
+            padding: 60px;
+            border-radius: 20px;
+            border: 1px solid #333;
+        }
+
+        .btn-contato {
+            display: inline-block;
+            background: var(--cor-primaria);
+            color: #000;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 50px;
+            transition: 0.3s;
+            margin-top: 25px;
+        }
+
+        .btn-contato:hover {
+            background: #fff;
+            box-shadow: 0 0 20px rgba(255, 222, 89, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="nome-atleta">LUAN DIAS</h1>
+        <p class="tagline">Atleta Profissional</p>
+    </header>
+
+    <section id="sobre">
+        <h2>Trajetória</h2>
+        <p>Minha jornada é movida pela disciplina e pela busca incessante pela performance. Como Luan Dias, meu compromisso com o esporte vai além dos resultados; é sobre superar limites a cada novo desafio enfrentado na arena.</p>
+    </section>
+
+    <section id="stats">
+        <h2>Histórico de Vitórias</h2>
+        <div class="grid-conquistas">
+            <div class="card">
+                <h3>Campeão Regional</h3>
+                <p>Temporada 2024 - Categoria Elite</p>
+            </div>
+            <div class="card">
+                <h3>Recorde Pessoal</h3>
+                <p>Superação de marca histórica em 2025</p>
+            </div>
+            <div class="card">
+                <h3>Destaque do Ano</h3>
+                <p>Prêmio de atleta revelação</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcerias">
+        <div class="contato-container">
+            <h2>Vamos trabalhar juntos?</h2>
+            <p>Seja para patrocínios, palestras ou parcerias de marca.</p>
+            <a href="mailto:contato@luandias.com" class="btn-contato">Enviar Proposta</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Luan Dias. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
