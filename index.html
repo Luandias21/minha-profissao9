@@ -4,271 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luan Dias | Atleta Profissional</title>
-    <style>
-        /* CSS Unificado - Moderno e Esportivo */
-        :root {
-            --preto: #050505;
-            --cinza-escuro: #1a1a1a;
-            --dourado: #ffde59;
-            --branco: #ffffff;
-            --fonte-titulo: 'Impact', 'Arial Black', sans-serif;
-            --fonte-corpo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: var(--preto);
-            color: var(--branco);
-            font-family: var(--fonte-corpo);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* --- Header / Menu --- */
-        header {
-            background: rgba(0, 0, 0, 0.85);
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--dourado);
-        }
-
-        .logo {
-            font-family: var(--fonte-titulo);
-            font-size: 1.8rem;
-            color: var(--branco);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .logo span {
-            color: var(--dourado);
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--branco);
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--dourado);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), 
-                        url('https://images.unsplash.com/photo-1627931326442-99042b467262?q=80&w=1920') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        .hero h1 {
-            font-family: var(--fonte-titulo);
-            font-size: 5rem;
-            color: var(--branco);
-            text-transform: uppercase;
-            line-height: 0.9;
-            margin-bottom: 20px;
-            text-shadow: 4px 4px 0px rgba(0,0,0,0.5);
-        }
-
-        .hero h1 span {
-            color: var(--dourado);
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            color: var(--branco);
-            margin-bottom: 30px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            font-weight: 300;
-        }
-
-        .btn-cta {
-            text-decoration: none;
-            padding: 18px 45px;
-            background-color: var(--dourado);
-            color: var(--preto);
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            border-radius: 2px;
-            transition: 0.3s;
-            letter-spacing: 1px;
-        }
-
-        .btn-cta:hover {
-            background-color: var(--branco);
-            transform: scale(1.05);
-        }
-
-        /* --- Seções Gerais --- */
-        section {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            font-family: var(--fonte-titulo);
-            font-size: 3rem;
-            color: var(--branco);
-            text-align: center;
-            margin-bottom: 60px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        h2 span {
-            color: var(--dourado);
-        }
-
-        /* --- Sobre Mim --- */
-        .sobre-content {
-            background-color: var(--cinza-escuro);
-            padding: 50px;
-            border-radius: 5px;
-            border-left: 5px solid var(--dourado);
-            font-size: 1.2rem;
-            text-align: center;
-        }
-
-        /* --- Conquistas Grid --- */
-        .conquistas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .conquista-card {
-            background-color: var(--cinza-escuro);
-            padding: 40px;
-            text-align: center;
-            border-radius: 5px;
-            transition: 0.3s;
-            border: 1px solid #333;
-        }
-
-        .conquista-card:hover {
-            border-color: var(--dourado);
-            transform: translateY(-5px);
-        }
-
-        .conquista-card h3 {
-            font-size: 2rem;
-            color: var(--dourado);
-            margin-bottom: 10px;
-        }
-
-        /* --- Footer / Contato --- */
-        footer {
-            background-color: var(--cinza-escuro);
-            text-align: center;
-            padding: 60px 20px;
-            border-top: 2px solid var(--dourado);
-        }
-
-        .btn-contato {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 40px;
-            background-color: transparent;
-            color: var(--dourado);
-            text-decoration: none;
-            font-weight: bold;
-            border: 2px solid var(--dourado);
-            border-radius: 2px;
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-
-        .btn-contato:hover {
-            background-color: var(--dourado);
-            color: var(--preto);
-        }
-
-        /* --- Responsividade --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 3rem; }
-            nav { display: none; } /* Simples para mobile */
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">LUAN<span>DIAS</span></div>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#conquistas">Conquistas</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="overlay">
+        
+        <header>
+            <div class="logo">LUAN<span>DIAS</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conquistas">Conquistas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section class="hero">
-        <h1>LUAN <span>DIAS</span></h1>
-        <p>Atleta de Elite</p>
-        <a href="#contato" class="btn-cta">Patrocínio</a>
-    </section>
+        <section class="hero">
+            <h1>LUAN <span>DIAS</span></h1>
+            <p>Atleta de Elite</p>
+            <a href="#contato" class="btn-cta">Patrocínio</a>
+        </section>
 
-    <section id="sobre">
-        <h2>Sobre <span>Mim</span></h2>
-        <div class="sobre-content">
-            <p>Foco, disciplina e resultados. Minha carreira é pautada na superação diária de limites e na busca constante pela excelência na arena. Cada treino é um degrau rumo ao topo.</p>
-        </div>
-    </section>
-
-    <section id="conquistas">
-        <h2>Principais <span>Conquistas</span></h2>
-        <div class="conquistas-grid">
-            <div class="conquista-card">
-                <h3>1º Lugar</h3>
-                <p>Campeonato Nacional 2025</p>
+        <section id="sobre" class="container">
+            <h2>Sobre <span>Mim</span></h2>
+            <div class="sobre-content">
+                <p>Foco, disciplina e resultados. Minha carreira é pautada na superação diária de limites e na busca constante pela excelência na arena. Cada treino é um degrau rumo ao topo.</p>
             </div>
-            <div class="conquista-card">
-                <h3>Recorde</h3>
-                <p>Melhor tempo do ano</p>
-            </div>
-            <div class="conquista-card">
-                <h3>Top 5</h3>
-                <p>Ranking Mundial</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer id="contato">
-        <h2>Vamos <span>trabalhar</span>?</h2>
-        <p>Interessado em parcerias ou patrocínio?</p>
-        <a href="mailto:contato@luandias.com" class="btn-contato">Enviar Proposta</a>
-    </footer>
+        <section id="conquistas" class="container">
+            <h2>Principais <span>Conquistas</span></h2>
+            <div class="conquistas-grid">
+                <div class="conquista-card">
+                    <h3>1º Lugar</h3>
+                    <p>Campeonato Nacional 2025</p>
+                </div>
+                <div class="conquista-card">
+                    <h3>Recorde</h3>
+                    <p>Melhor tempo do ano</p>
+                </div>
+                <div class="conquista-card">
+                    <h3>Top 5</h3>
+                    <p>Ranking Mundial</p>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contato">
+            <h2>Vamos <span>trabalhar</span>?</h2>
+            <p>Interessado em parcerias ou patrocínio?</p>
+            <a href="mailto:contato@luandias.com" class="btn-contato">Enviar Proposta</a>
+        </footer>
+    </div>
 
 </body>
 </html>
