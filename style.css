@@ -154,8 +154,9 @@ h2 span {
 
 .conquistas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    justify-content: center;
 }
 
 .conquista-card {
@@ -164,6 +165,9 @@ h2 span {
     text-align: center;
     border: 1px solid #333;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .conquista-card:hover {
@@ -173,6 +177,11 @@ h2 span {
 .conquista-card h3 {
     font-size: 2rem;
     color: var(--dourado);
+    margin-bottom: 10px;
+}
+
+.conquista-card p {
+    font-size: 1.1rem;
 }
 
 footer {
