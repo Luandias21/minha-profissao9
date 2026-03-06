@@ -1,4 +1,4 @@
-/* style.css - Esportivo Moderno */
+/* style.css */
 
 :root {
     --preto: #050505;
@@ -21,8 +21,7 @@ body {
     font-family: var(--fonte-corpo);
     line-height: 1.6;
     overflow-x: hidden;
-    /* Imagem de fundo atualizada com o link fornecido */
-    background-image: url('https://www.gazetadorn.com.br/uploads/images/2024/02/volei-natal-desportivo-entra-em-quadra-nesta-sexta-pela-superliga-b-feminina-0fcff.jpeg');
+    background-image: url('https://www.otempo.com.br/content/dam/otempo/editorias/sports/volei/2024/2/sports-bola-de-volei-na-beira-da-quadra-limpa-1713416599.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -30,12 +29,10 @@ body {
 }
 
 .overlay {
-    /* Camada escura para dar contraste ao texto */
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     min-height: 100vh;
 }
 
-/* --- Header / Menu --- */
 header {
     background: rgba(0, 0, 0, 0.9);
     padding: 20px 50px;
@@ -80,7 +77,6 @@ nav a:hover {
     color: var(--dourado);
 }
 
-/* --- Hero Section --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -111,7 +107,6 @@ nav a:hover {
     margin-bottom: 30px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-weight: 300;
 }
 
 .btn-cta {
@@ -122,9 +117,7 @@ nav a:hover {
     font-weight: bold;
     font-size: 1.1rem;
     text-transform: uppercase;
-    border-radius: 2px;
     transition: 0.3s;
-    letter-spacing: 1px;
 }
 
 .btn-cta:hover {
@@ -132,8 +125,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* --- Seções Gerais --- */
-section {
+section.container {
     padding: 100px 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -142,31 +134,27 @@ section {
 h2 {
     font-family: var(--fonte-titulo);
     font-size: 3rem;
-    color: var(--branco);
     text-align: center;
     margin-bottom: 60px;
     text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 h2 span {
     color: var(--dourado);
 }
 
-/* --- Sobre Mim --- */
 .sobre-content {
     background-color: var(--cinza-escuro);
-    padding: 50px;
+    padding: 40px;
     border-radius: 5px;
     border-left: 5px solid var(--dourado);
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: 1.25rem;
+    text-align: justify;
 }
 
-/* --- Conquistas Grid --- */
 .conquistas-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 
@@ -174,23 +162,19 @@ h2 span {
     background-color: var(--cinza-escuro);
     padding: 40px;
     text-align: center;
-    border-radius: 5px;
-    transition: 0.3s;
     border: 1px solid #333;
+    transition: 0.3s;
 }
 
 .conquista-card:hover {
     border-color: var(--dourado);
-    transform: translateY(-5px);
 }
 
 .conquista-card h3 {
     font-size: 2rem;
     color: var(--dourado);
-    margin-bottom: 10px;
 }
 
-/* --- Footer / Contato --- */
 footer {
     background-color: var(--cinza-escuro);
     text-align: center;
@@ -202,14 +186,12 @@ footer {
     display: inline-block;
     margin-top: 30px;
     padding: 15px 40px;
-    background-color: transparent;
+    border: 2px solid var(--dourado);
     color: var(--dourado);
     text-decoration: none;
     font-weight: bold;
-    border: 2px solid var(--dourado);
-    border-radius: 2px;
-    transition: 0.3s;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .btn-contato:hover {
@@ -217,8 +199,8 @@ footer {
     color: var(--preto);
 }
 
-/* --- Responsividade --- */
 @media (max-width: 768px) {
     .hero h1 { font-size: 3rem; }
-    nav { display: none; } /* Simples para mobile */
+    header { padding: 20px; }
+    nav { display: none; }
 }
